@@ -4,7 +4,7 @@
 #include "movestack.c"
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 3;        /* border pixel of windows */
 static const unsigned int gappx     = 5;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
@@ -74,6 +74,8 @@ static const char *voldowncmd[] = { "amixer", "-q", "sset", "Master", "2%-", "un
 static const char *mutecmd[]    = { "amixer", "-q", "sset", "Master", "toggle", NULL };
 static const char *briupcmd[]    = { "xbacklight", "-inc", "5", NULL };
 static const char *bridowncmd[]    = { "xbacklight", "-dec", "5", NULL };
+static const char *pmenucmd[]    = { "pmenu", NULL };
+static const char *lockcmd[]    = { "pixellock", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -116,7 +118,8 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ShiftMask,             XK_c,      quit,           {0} },
+	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = lockcmd } },
+	{ MODKEY|ShiftMask,             XK_c,      spawn,          {.v = pmenucmd } },
 	{      0,      XF86XK_AudioRaiseVolume,    spawn,          {.v = volupcmd } },
 	{      0,      XF86XK_AudioLowerVolume,    spawn,          {.v = voldowncmd } },
 	{      0,      XF86XK_AudioMute,           spawn,          {.v = mutecmd } },
