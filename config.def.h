@@ -46,9 +46,11 @@ static const int resizehints = 0;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[]=",      tile },    /* first entry is default */
-	{ "><>",      NULL },    /* no layout function means floating behavior */
-	{ "[M]",      monocle },
+	// { "[]=",      tile },    /* first entry is default */
+	{ "",      tile },    /* first entry is default */
+	{ "",      NULL },    /* no layout function means floating behavior */
+	//{ "[M]",      monocle },
+	{ "",      monocle },
 };
 
 /* key definitions */
@@ -75,7 +77,6 @@ static const char *mutecmd[]    = { "amixer", "-q", "sset", "Master", "toggle", 
 static const char *briupcmd[]    = { "xbacklight", "-inc", "5", NULL };
 static const char *bridowncmd[]    = { "xbacklight", "-dec", "5", NULL };
 static const char *pmenucmd[]    = { "pmenu", NULL };
-static const char *lockcmd[]    = { "pixellock", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -118,7 +119,6 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = lockcmd } },
 	{ MODKEY|ShiftMask,             XK_c,      spawn,          {.v = pmenucmd } },
 	{      0,      XF86XK_AudioRaiseVolume,    spawn,          {.v = volupcmd } },
 	{      0,      XF86XK_AudioLowerVolume,    spawn,          {.v = voldowncmd } },
