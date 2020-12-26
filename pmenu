@@ -5,7 +5,7 @@ choice=$(echo -e "Lock\nSuspend\nShutdown\nLogout\nRestart\nRestart DWM" | $DMEN
 
 case "$choice" in
 	Lock) pixellock ;;
-	Suspend) pixellock ;;
+	Suspend) systemctl suspend ;;
 	Shutdown) shutdown now ;;
 	Logout) killall xinit ;;
 	Restart) reboot ;;
