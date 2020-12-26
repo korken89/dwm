@@ -1,0 +1,5 @@
+#!/bin/sh
+
+scrot -o -m /tmp/lok.png
+convert /tmp/lok.png -scale 5% -scale 2000% /tmp/lok.png
+i3lock -i /tmp/lok.png

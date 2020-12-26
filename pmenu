@@ -1,0 +1,13 @@
+#!/bin/bash
+
+DMENU='dmenu -i -l 20'
+choice=$(echo -e "Lock\nSuspend\nShutdown\nLogout\nRestart\nRestart DWM" | $DMENU)
+
+case "$choice" in
+	Lock) pixellock ;;
+	Suspend) pixellock ;;
+	Shutdown) shutdown now ;;
+	Logout) killall xinit ;;
+	Restart) reboot ;;
+	"Restart DWM") pkill dwm ;;
+esac
