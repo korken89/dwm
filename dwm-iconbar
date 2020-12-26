@@ -37,8 +37,8 @@ vol(){
 }
 
 bat() {
-	battery="$(cat /sys/class/power_supply/BAT0/capacity)"
-	echo " $battery %"
+	battery="$(bar-battery)"
+	echo "$battery"
 }
 
 batstat() {
@@ -53,5 +53,5 @@ status(){
 
 while true; do
 	xsetroot -name "$(status)"
-	sleep 5s 
+	sleep 5s
 done
