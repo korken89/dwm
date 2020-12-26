@@ -32,7 +32,7 @@ bat() {
 }
 
 status(){
-	echo "$(mem) | $(upgrades) | $(hdd) | $(vol) | $(bat) | $(dte)"
+	echo "$(mem)   $(upgrades)   $(hdd)   $(vol)    $(bat)    $(dte)   "
 }
 
 
