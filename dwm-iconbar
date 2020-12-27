@@ -2,7 +2,7 @@
 # REQUIRES FONT-AWESOME PACKAGE TO WORK PROPERLY
 
 dte(){
-        dte="$(date +"%a, %b %d %R")"
+        dte="$(date +"%D  %R")"
         echo "$dte"
 }
 
@@ -31,8 +31,15 @@ bat() {
 	echo "$battery"
 }
 
+keyb() {
+	keyb="$(xkblayout-state print " %s")"
+	echo "$keyb"
+}
+
+
 status(){
-	echo "$(mem)   $(upgrades)   $(hdd)   $(vol)    $(bat)    $(dte)   "
+	echo "$(keyb)   $(upgrades)   $(hdd)   $(vol)    $(bat)    $(dte)   "
+	# echo "$(keyb)   $(mem)   $(upgrades)   $(hdd)   $(vol)    $(bat)    $(dte)   "
 }
 
 
