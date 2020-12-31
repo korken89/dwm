@@ -2,5 +2,5 @@
 
 while true; do
     sudo pacman -Sy 1>/dev/null 2>&1
-    sleep 60s
+    sleep 600s
 done

@@ -17,7 +17,7 @@ mem(){
 }
 
 upgrades(){
-        upgrades="$(yay -Qu | wc -l)"
+        upgrades="$(pacman -Qu | wc -l)"
         echo "  $upgrades"
 }
 
