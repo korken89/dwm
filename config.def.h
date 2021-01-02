@@ -91,6 +91,7 @@ static const char *briupcmd[]      = { "xbacklight", "-inc", "5", NULL };
 static const char *bridowncmd[]    = { "xbacklight", "-dec", "5", NULL };
 static const char *pmenucmd[]      = { "pmenu", NULL };
 static const char *screenshotcmd[] = { "screenshot", NULL };
+static const char *screenmenucmd[]      = { "screenmenu", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -138,6 +139,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_c,      spawn,          {.v = pmenucmd } },
+	{ MODKEY,                       XK_s,      spawn,          {.v = screenmenucmd } },
 	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = screenshotcmd } },
 	{      0,      XF86XK_AudioRaiseVolume,    spawn,          {.v = volupcmd } },
 	{      0,      XF86XK_AudioLowerVolume,    spawn,          {.v = voldowncmd } },

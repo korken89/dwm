@@ -44,6 +44,8 @@ install: all
 	chmod 755 ${DESTDIR}${PREFIX}/bin/dwm-iconbar
 	cp -f pmenu ${DESTDIR}${PREFIX}/bin
 	chmod 755 ${DESTDIR}${PREFIX}/bin/pmenu
+	cp -f screenmenu ${DESTDIR}${PREFIX}/bin
+	chmod 755 ${DESTDIR}${PREFIX}/bin/screenmenu
 	cp -f pacman-chron ${DESTDIR}${PREFIX}/bin
 	chmod 755 ${DESTDIR}${PREFIX}/bin/pacman-chron
 	cp -f bar-battery ${DESTDIR}${PREFIX}/bin

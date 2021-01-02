@@ -1,7 +1,6 @@
 #!/bin/bash
 
-DMENU='dmenu -i -l 20'
-choice=$(echo -e "Lock\nSuspend\nShutdown\nLogout\nRestart\nRestart DWM" | $DMENU)
+choice=$(echo -e "Lock\nSuspend\nShutdown\nLogout\nRestart\nRestart DWM" | dmenu -i -l 20 -p "Select action:")
 
 case "$choice" in
 	Lock) pixellock ;;
