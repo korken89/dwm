@@ -36,11 +36,10 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class        instance    title       tags mask     isfloating   monitor */
-	// { "Gimp",       NULL,       NULL,       0,            1,           -1 },
-	{ "Thunar",     NULL,       NULL,       0,            1,           -1 },
-	{ "Galculator", NULL,       NULL,       0,            1,           -1 },
-    // { "firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	/* class           instance      title       tags mask     isfloating   monitor */
+	{ "Thunar",          NULL,           NULL,       0,            1,           -1 },
+	{ "Galculator",      NULL,           NULL,       0,            1,           -1 },
+	{ "TelegramDesktop", NULL, "Media viewer",       0,            1,           -1 },
 };
 
 /* layout(s) */
