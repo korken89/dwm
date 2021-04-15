@@ -18,7 +18,7 @@ if not status:
 else:
     state = status.split(": ")[1].split(", ")[0]
     commasplitstatus = status.split(", ")
-    percentleft = int(commasplitstatus[1].rstrip("%\n"))
+    percentleft = int(commasplitstatus[1].split("%\n")[0])
 
     # stands for charging
     FA_LIGHTNING = "\uf0e7"
@@ -52,7 +52,7 @@ else:
     else:
         fulltext = FA_LIGHTNING + " " + FA_PLUG + " "
 
-    form =  '{}%'
+    form = '{}%'
     fulltext += form.format(percentleft)
     fulltext += timeleft
 
