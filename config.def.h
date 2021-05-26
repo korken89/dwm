@@ -19,7 +19,7 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 /*  Modes after showtab_nmodes are disabled.                                */
 enum showtab_modes { showtab_never, showtab_auto, showtab_nmodes, showtab_always};
 static const int showtab			= showtab_auto;        /* Default tab bar show mode */
-static const int toptab				= True;               /* False means bottom tab bar */
+static const int toptab				= False;               /* False means bottom tab bar */
 
 static const int focusonwheel       = 0;
 static const char *fonts[]          = { "Fira Code:style=Regular:size=11" };
@@ -89,7 +89,7 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run_history", "-i", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char scratchpadname[] = "scratchpad";
-static const char *scratchpadcmd[] = { "alacritty", "-t", scratchpadname, "-d", "120", "34", NULL };
+static const char *scratchpadcmd[] = { "alacritty", "-t", scratchpadname, "-v", NULL };
 
 static const char *volupcmd[]      = { "amixer", "-q", "sset", "Master", "2%+", "unmute", NULL };
 static const char *voldowncmd[]    = { "amixer", "-q", "sset", "Master", "2%-", "unmute", NULL };
