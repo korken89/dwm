@@ -321,6 +321,9 @@ static Display *dpy;
 static Drw *drw;
 static Monitor *mons, *selmon;
 static Window root, wmcheckwin;
+static Layout *last_layout;
+static int last_showtab;
+static int last_gappx;
 
 /* configuration, allows nested code to access above variables */
 #include "config.h"
@@ -1847,9 +1850,6 @@ setlayout(const Arg *arg)
 		drawbar(selmon);
 }
 
-Layout *last_layout;
-int last_showtab;
-int last_gappx;
 void
 fullscreen(const Arg *arg)
 {
