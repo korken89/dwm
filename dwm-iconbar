@@ -8,7 +8,7 @@ dte(){
 
 hdd(){
         hdd="$(df -h /home | grep dev | awk '{print$3, " "  $5}')"
-        echo "  $hdd"
+        echo " ☰ $hdd"
 }
 
 mem(){
@@ -18,12 +18,12 @@ mem(){
 
 upgrades(){
         upgrades="$(pacman -Qu | wc -l)"
-        echo "  $upgrades"
+        echo " ⇪ $upgrades"
 }
 
 vol(){
 	vol="$(amixer -D pulse get Master | awk -F'[][]' 'END{print $4":"$2}')"
-	echo "  $vol"
+	echo " ▶ $vol"
 }
 
 bat() {
@@ -32,13 +32,13 @@ bat() {
 }
 
 keyb() {
-	keyb="$(xkblayout-state print " %s")"
+	keyb="$(xkblayout-state print "⌨ %s")"
 	echo "$keyb"
 }
 
 
 status(){
-	echo "$(keyb)   $(upgrades)   $(hdd)   $(vol)    $(bat)    $(dte)   "
+	echo "$(keyb)  ╵ $(upgrades)  ╵ $(hdd)  ╵ $(vol)  ╵  $(bat)  ╵  $(dte)  ╵ "
 	# echo "$(keyb)   $(mem)   $(upgrades)   $(hdd)   $(vol)    $(bat)    $(dte)   "
 }
 

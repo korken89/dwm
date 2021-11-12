@@ -21,23 +21,23 @@ else:
     percentleft = int(commasplitstatus[1].split("%")[0])
 
     # stands for charging
-    FA_LIGHTNING = "\uf0e7"
+    FA_LIGHTNING = "↑"
 
     # stands for plugged in
-    FA_PLUG = "\uf1e6"
+    FA_PLUG = "◉"
 
     fulltext = ""
     timeleft = ""
 
     def icon(percent):
         if percent < 20:
-            return "\uf244 "
+            return "▁ "
         if percent < 45:
-            return "\uf243 "
+            return "▄ "
         if percent < 70:
-            return "\uf242 "
+            return "▆ "
         if percent < 95:
-            return "\uf241 "
+            return "█ "
         return "\uf240 "
 
     if state == "Discharging":
@@ -48,7 +48,7 @@ else:
     elif state == "Full":
         fulltext = FA_PLUG + " "
     elif state == "Unknown":
-        fulltext = "\uf128 "
+        fulltext = " "
     else:
         fulltext = FA_LIGHTNING + " " + FA_PLUG + " "
 
