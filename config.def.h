@@ -22,8 +22,8 @@ static const int showtab			= showtab_auto;        /* Default tab bar show mode *
 static const int toptab				= True;               /* False means bottom tab bar */
 
 static const int focusonwheel       = 0;
-static const char *fonts[]          = { "Fira Code:style=Regular:size=8" };
-static const char dmenufont[]       = "Fira Code:style=Regular:size=8";
+static const char *fonts[]          = { "Fira Code:style=Regular:size=12" };
+static const char dmenufont[]       = "Fira Code:style=Regular:size=12";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";

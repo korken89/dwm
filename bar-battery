@@ -32,7 +32,7 @@ else:
     def icon(percent):
         if percent < 20:
             return "▁ "
-        if percent < 45:
+        if percent < 51:
             return "▄ "
         if percent < 70:
             return "▆ "
@@ -48,7 +48,7 @@ else:
     elif state == "Full":
         fulltext = FA_PLUG + " "
     elif state == "Unknown":
-        fulltext = " "
+        fulltext = "   "
     else:
         fulltext = FA_LIGHTNING + " " + FA_PLUG + " "
 
