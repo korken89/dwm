@@ -2,7 +2,7 @@
 # REQUIRES FONT-AWESOME PACKAGE TO WORK PROPERLY
 
 dte(){
-        dte="$(date +"%D  %R")"
+        dte="$(date +"%d/%m-20%y  %R")"
         echo "$dte"
 }
 

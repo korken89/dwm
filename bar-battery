@@ -34,11 +34,11 @@ else:
             return "▁ "
         if percent < 51:
             return "▄ "
-        if percent < 70:
+        if percent < 76:
             return "▆ "
-        if percent < 95:
-            return "█ "
-        return "\uf240 "
+        # if percent < 95:
+        #     return "█ "
+        return "█ "
 
     if state == "Discharging":
         time = commasplitstatus[-1].split()[0]
