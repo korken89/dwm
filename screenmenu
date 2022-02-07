@@ -4,7 +4,8 @@ choice=$(echo -e "Laptop\nWide Monitor\nWork" | dmenu -i -l 20 -p "Select screen
 
 case "$choice" in
 	Laptop) xrandr --output eDP --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-A-0 --off --output DisplayPort-0 --off ;;
-	"Wide Monitor") xrandr --output eDP --off --output HDMI-A-0 --primary --mode 3440x1440 --pos 0x0 --rotate normal --output DisplayPort-0 --off ;;
+	# "Wide Monitor") xrandr --output eDP --off --output HDMI-A-0 --primary --mode 3440x1440 --pos 0x0 --rotate normal --output DisplayPort-0 --off ;;
+	"Wide Monitor") xrandr --output eDP --off --output HDMI-A-0 --off --output DisplayPort-0 --primary --mode 3440x1440 --pos 0x0 --rotate normal
 	Work) xrandr --output eDP --mode 1920x1080 --pos 3840x0 --rotate normal --output HDMI-A-0 --primary --mode 1920x1080 --pos 1920x0 --rotate normal --output DisplayPort-0 --mode 1920x1080 --pos 0x0 --rotate normal ;;
 esac
 
